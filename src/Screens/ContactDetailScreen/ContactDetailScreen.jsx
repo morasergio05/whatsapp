@@ -15,25 +15,22 @@ export default function ContactDetailScreen() {
     }
       const { updateContactById } = useContext(ContactContext);
     //A los 3 seg de ejecutarse el componente quiero que se modifique el nombre del contacto a ratatuille
-    useEffect(
-        () => {
-            setTimeout(
-                () => {
-                    updateContactById(
-                        { ...contactSelected, contact_name: 'ratatoulle' },
-                        contactSelected.contact_id
-                    )
-                },
-                3000
-            )
-        },
-        []
-    )
+    
     console.log('contacto despues de la actualizacion', contactSelected);
     return (
         <div>
             <h1>Contacto detallado</h1>
             <h2> Contacto Seleccionado: {contactSelected.contact_name}</h2>
+          <button
+            onClick={
+                () => {
+                    updateContactById(
+                        {...contactSelected, contact_name: 'ratatoulle'},
+                        contactSelected.contact_id
+                    )
+                }
+            }
+        >Cambiar</button>
             <div>
                 <MessagesList mensajes={contactSelected.mensajes} />
             </div>
