@@ -1,4 +1,4 @@
-import contacts_data from "../data/contactData";
+import contacts_data from "../Data/ContactData";
 //Comunicacion con ContactData
 function getContactsList (){
 
