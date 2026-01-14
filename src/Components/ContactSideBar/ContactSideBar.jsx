@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+
 import ContactList from '../ContactList/ContactList'
-import { getContactsList } from '../../services/contactService'
+
 //CONTACTSIDEBAR es el componente Principal
 export default function ContactSidebar() {
   
