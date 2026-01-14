@@ -1,6 +1,7 @@
 import contacts_data from "../data/contactData";
 //Comunicacion con ContactData
 function getContactsList (){
+    
     return contacts_data
     //devuelve lista de contactos
 }
