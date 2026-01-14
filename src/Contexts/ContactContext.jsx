@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { Outlet } from "react-router";
-import { getContactsList } from "../services/contactService";
+import { getContactsList } from "../Services/contactService";
 
 export const ContactContext = createContext()
 
