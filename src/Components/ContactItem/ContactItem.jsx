@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router'
 import './contactItem.css'
-import { ThemeContext } from '../../Contexts/themeContexts.jsx'
+import { ThemeContext } from '../../Contexts/ThemeContexts.jsx'
 export default function ContactItem({ contact }) {
     const {isDarkMode} = useContext(ThemeContext)
     console.log(isDarkMode)
