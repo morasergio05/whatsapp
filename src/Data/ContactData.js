@@ -1,80 +1,78 @@
 const contacts_data = [
     {
         contact_id: 1,
-        contact_name: 'Jose',
-        contact_avatar: 'https://png.pngtree.com/png-clipart/20231019/original/pngtree-user-profile-avatar-png-image_13369991.png',
+        contact_name: 'Laura',
+        contact_avatar: 'https://www.seoptimer.com/storage/images/2014/08/no-con-la-mascota.jpg',
         last_message_created_at: new Date(),
         last_message_content: 'Hola que tal',
         last_message_status: 'NOT_RECEIVED', /* 'SEEN' | 'UNSEEN' */
-        mensajes:[
+        messages: [
             {
                 message_id: 1,
-                message_content: 'Hola que tal',
+                message_content: 'Saludar tu debes',
+                message_status: 'SEEN', /* 'SEEN' | 'UNSEEN' */
                 message_created_at: new Date(),
-                message_status: 'SENT' /* 'SENT' | 'RECEIVED' | 'SEEN' */
+                send_by_me: false
             },
-             {
+            {
                 message_id: 2,
-                message_content: 'No te olvides del informe',
+                message_content: 'Lo se maestro',
+                message_status: 'SEEN', /* 'SEEN' | 'UNSEEN' */
                 message_created_at: new Date(),
-                message_status: 'SENT' /* 'SENT' | 'RECEIVED' | 'SEEN' */
+                send_by_me: true
             },
             {
                 message_id: 3,
-                message_content: 'es importante',
+                message_content: 'El lado oscuro php es',
+                message_status: 'SEEN', /* 'SEEN' | 'UNSEEN' */
                 message_created_at: new Date(),
-                message_status: 'SENT' /* 'SENT' | 'RECEIVED' | 'SEEN' */
-            }
+                send_by_me: false
+            },
+            {
+                message_id: 4,
+                message_content: 'Sabias palabras maestro',
+                message_status: 'SEEN', /* 'SEEN' | 'UNSEEN' */
+                message_created_at: new Date(),
+                send_by_me: true
+            },
         ]
     },
     {
         contact_id: 2,
-        contact_name: 'manuel',
-        contact_avatar: 'https://www.argentina.gob.ar/sites/default/files/manuel_belgrano_2020.jpg',
+        contact_name: 'Yoda',
+        contact_avatar: 'https://static.wikia.nocookie.net/esstarwars/images/4/45/Yoda.jpg/revision/latest?cb=20090507210712',
         last_message_created_at: new Date(),
         last_message_content: 'Saludar tu debes',
         last_message_status: 'SEEN', /* 'SEEN' | 'UNSEEN' */
-        mensajes:[
+        messages: [
             {
                 message_id: 1,
-                message_content: 'te guso la bandera que hice?',
+                message_content: 'Saludar tu debes',
+                message_status: 'SEEN', /* 'SEEN' | 'UNSEEN' */
                 message_created_at: new Date(),
-                message_status: 'SENT' /* 'SENT' | 'RECEIVED' | 'SEEN' */
+                send_by_me: false
             },
-              {
+            {
                 message_id: 2,
-                message_content: 'espero que si',
+                message_content: 'Lo se maestro',
+                message_status: 'SEEN', /* 'SEEN' | 'UNSEEN' */
                 message_created_at: new Date(),
-                message_status: 'SENT' /* 'SENT' | 'RECEIVED' | 'SEEN' */
-            }, 
-             {
-                message_id: 3,
-                message_content: 'Nos vemos pronto',
-                message_created_at: new Date(),
-                message_status: 'SENT' /* 'SENT' | 'RECEIVED' | 'SEEN' */
-            }
-        ]
-    },
-     {
-        contact_id: 3,
-        contact_name: 'Camila',
-        contact_avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYragrFQitrNjRDWKDXHXpvQeLYk3HXP2pGA&s',
-        last_message_created_at: new Date(),
-        last_message_content: 'Saludar tu debes',
-        last_message_status: 'UNSEEN', /* 'SEEN' | 'UNSEEN' */
-        mensajes:[
-            {
-                message_id: 1,
-                message_content: 'mañana es mi cumpleaños',
-                message_created_at: new Date(),
-                message_status: 'SENT' /* 'SENT' | 'RECEIVED' | 'SEEN' */
+                send_by_me: true
             },
             {
-                 message_id: 2,
-                message_content: 'espero verte',
+                message_id: 3,
+                message_content: 'El lado oscuro php es',
+                message_status: 'SEEN', /* 'SEEN' | 'UNSEEN' */
                 message_created_at: new Date(),
-                message_status: 'SENT' /* 'SENT' | 'RECEIVED' | 'SEEN' */
-            }
+                send_by_me: false
+            },
+            {
+                message_id: 4,
+                message_content: 'Sabias palabras maestro',
+                message_status: 'SEEN', /* 'SEEN' | 'UNSEEN' */
+                message_created_at: new Date(),
+                send_by_me: true
+            },
         ]
     },
 ]

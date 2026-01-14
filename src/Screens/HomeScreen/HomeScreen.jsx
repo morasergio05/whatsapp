@@ -1,13 +1,14 @@
-import React, { useContext } from "react";
-import ContactSidebar from "../../Components/ContactSideBar/ContactSideBar";
-import { ContactContext } from "../../Contexts/ContactContext";
+import React, { useContext } from 'react'
+import ContactSidebar from '../../Components/ContactSideBar/ContactSideBar'
+import { ContactContext } from '../../Contexts/ContactContext'
+
+
 export default function HomeScreen() {
-    const{updateContactById, contacts}= useContext(ContactContext)
-    console.log('prueba contacto', contacts?.[0])
-    return (
-        <div>
-            <h1>Pagina Principal</h1>
-            <button
+  const {updateContactById, contacts} = useContext(ContactContext)
+  return (
+    <div>
+        <h1>Pantalla principal</h1>
+        <button
             onClick={
                 () => {
                     updateContactById(
@@ -17,7 +18,7 @@ export default function HomeScreen() {
                 }
             }
         >Cambiar</button>
-            <ContactSidebar />
-        </div>
-    )
+        <ContactSidebar/>
+    </div>
+  )
 }

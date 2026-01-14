@@ -1,27 +1,28 @@
-import React, { use, useContext, useEffect } from 'react'
-import { useParams } from 'react-router';
-import { getContactById } from '../../services/contactService';
-import MessagesList from '../../Components/MessagesList/MessagesList';
-import { ContactDetailContext } from '../../Contexts/ContactDetailContext';
-import { ContactContext } from '../../Contexts/ContactContext';
+import React, { useContext } from 'react'
 
+import MessagesList from '../../Components/MessagesList/MessagesList'
+import { ContactDetailContext } from '../../Contexts/ContactDetailContext'
+import { ContactContext } from '../../Contexts/ContactContext'
+import NewMessageForm from '../../Components/NewMessageForm/NewMessageForm'
 
 export default function ContactDetailScreen() {
-    const { contactSelected } = useContext(ContactDetailContext);
-  
-    console.log('Contacto encontrado con Contexto', contactSelected);
-    if (!contactSelected) {
-        return <div>Contacto no encontrado</div>
-    }
-      const { updateContactById } = useContext(ContactContext);
-    //A los 3 seg de ejecutarse el componente quiero que se modifique el nombre del contacto a ratatuille
+    const { contactSelected } = useContext(ContactDetailContext)
     
-    console.log('contacto despues de la actualizacion', contactSelected);
-    return (
-        <div>
-            <h1>Contacto detallado</h1>
-            <h2> Contacto Seleccionado: {contactSelected.contact_name}</h2>
-          <button
+    
+    if(!contactSelected){
+        return (
+            <div>
+                <h2>Contacto no encontrado</h2>
+            </div>
+        )
+    }
+    const { updateContactById } = useContext(ContactContext)
+
+  return (
+    <div>
+        <h1>Detalle contacto</h1>
+        <h2>Contacto seleccionado: {contactSelected.contact_name}</h2>
+        <button
             onClick={
                 () => {
                     updateContactById(
@@ -31,14 +32,8 @@ export default function ContactDetailScreen() {
                 }
             }
         >Cambiar</button>
-            <div>
-                <MessagesList mensajes={contactSelected.mensajes} />
-            </div>
-        </div>
-    )
+        <MessagesList />
+        <NewMessageForm/>
+    </div>
+  )
 }
-
-/*
-Crear mensajes en cada contacto (en contactData.js)
-Renderizar la lista de mensajes en un componente llamado MessagesList (No hace falta estilos en esta etapa)
-*/

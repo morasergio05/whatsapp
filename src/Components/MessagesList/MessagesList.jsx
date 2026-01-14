@@ -4,18 +4,18 @@ import { ContactDetailContext } from '../../Contexts/ContactDetailContext'
 
 export default function MessagesList(props) {
     const {contactSelected}=useContext(ContactDetailContext);
-    if(contactSelected.mensajes.length===0){
+    if(contactSelected.messages && contactSelected.messages.length === 0){
         return <div>No hay mensajes para este contacto</div>
     }
   return (
     <div>
         mensajes
         {
-            contactSelected.mensajes.map(
-                (mensajes)=>{
+            contactSelected && contactSelected.messages.map(
+                (message)=>{
                     return(
-                        <div key={mensajes.message_id}>
-                            <p>{mensajes.message_content}</p>
+                        <div key={message.message_id}>
+                            <p>{message.message_content}</p>
                         </div>
                     )
 
